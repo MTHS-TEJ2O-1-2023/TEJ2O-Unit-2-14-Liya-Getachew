@@ -30,7 +30,7 @@ input.onButtonPressed(Button.A, function () {
   basic.showIcon(IconNames.Fabulous)
 })
 
-// press button 
+// press button
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
   loopCounter = 5
