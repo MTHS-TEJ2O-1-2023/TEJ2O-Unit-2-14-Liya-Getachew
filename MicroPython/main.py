@@ -8,12 +8,12 @@ from microbit import *
 
 
 # variables
-sprite = set_pixel(0, 0, 9)
 loop_counter = 0
 
 # setup
 display.clear()
-display.show(Image.FABULOUS)
+display.show(Image.ASLEEP)
+sleep(1000)
 
 # loop
 while True:
@@ -22,11 +22,29 @@ while True:
         display.clear()
         loop_counter = 0
 
+        # loop
         while loop_counter <= 5:
             sleep(500)
+
             display.set_pixel(loop_counter, loop_counter, 9)
-            loop_counter+=
-    display.show(Image.ANGRY)
+
+            # loop_counter goes up by 1
+            loop_counter += 1
+
+        display.show(Image.COW)
 
     if button_b.is_pressed():
+        # setup
+        display.clear()
+        loop_counter = 45
 
+        # loop
+        while loop_counter <= 4:
+            sleep(500)
+
+            display.set_pixel(loop_counter, loop_counter, 9)
+
+            # loop_counter goes down by 1
+            loop_counter -= 1
+
+        display.show(Image.GIRAFFE)
