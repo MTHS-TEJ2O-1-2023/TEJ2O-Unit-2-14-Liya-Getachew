@@ -1,7 +1,7 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
+ * Created by: Liya G
+ * Created on: Nov 2023
  * This program moves LED's diagonaly across the microbit
 */
 
@@ -13,7 +13,7 @@ basic.clearScreen()
 basic.pause(500)
 basic.showIcon(IconNames.Silly)
 
-// press button A
+// move sprite diagonally from (0,0) to (4,4)
 input.onButtonPressed(Button.A, function () {
   // setup
   basic.clearScreen()
@@ -26,12 +26,14 @@ input.onButtonPressed(Button.A, function () {
     sprite.set(LedSpriteProperty.Y, loopCounter)
     loopCounter++
   }
+
   sprite.delete()
   basic.showIcon(IconNames.Fabulous)
 })
 
-// press button
+// move sprite diagonally from (4,4) to (0,0)
 input.onButtonPressed(Button.B, function () {
+  // setup
   basic.clearScreen()
   loopCounter = 5
   sprite = game.createSprite(5, 5)
@@ -42,6 +44,7 @@ input.onButtonPressed(Button.B, function () {
     sprite.set(LedSpriteProperty.Y, loopCounter)
     loopCounter--
   }
+
   sprite.delete()
   basic.showIcon(IconNames.Sad)
 })
