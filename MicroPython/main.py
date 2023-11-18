@@ -26,6 +26,7 @@ while True:
         while loop_counter < 5:
             sleep(500)
 
+            # show pixels x,y location
             display.set_pixel(loop_counter, loop_counter, 9)
             sleep(500)
             display.clear()
@@ -44,6 +45,7 @@ while True:
         while loop_counter > -1:
             sleep(500)
 
+            # show pixels x,y location
             display.set_pixel(loop_counter, loop_counter, 9)
             sleep(500)
             display.clear()
